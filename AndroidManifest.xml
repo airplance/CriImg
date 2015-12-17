@@ -13,7 +13,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/cri_ic_launcher"
         android:theme="@style/AppTheme" >
         <activity
             android:name="hjh.criimag.Main"

@@ -13,7 +13,7 @@
         android:layout_height="100dp"
         android:layout_centerInParent="true"
         android:layout_marginBottom="15dp"
-        android:src="@drawable/ic_launcher"
+        android:src="@drawable/cri_ic_launcher"
         voc:cri_border_color="#546524"
         voc:cri_border_width="1dp" />
 
