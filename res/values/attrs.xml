@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+		Copyright (C) 2010 Regis Montoya (aka r3gis - www.r3gis.fr)
+	
+		This file is part of CSipSimple. CSipSimple is free software: you can
+		redistribute it and/or modify it under the terms of the GNU General
+		Public License as published by the Free Software Foundation, either
+		version 3 of the License, or (at your option) any later version.
+
+		CSipSimple is distributed in the hope that it will be useful, but
+		WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+		General Public License for more details. You should have received a
+		copy of the GNU General Public License along with CSipSimple. If not,
+		see <http://www.gnu.org/licenses/>.
+-->
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <!-- Cri View -->
+    <declare-styleable name="criView">
+
+        <!-- 测试背景 -->
+        <attr name="groundnormal" format="reference|color"></attr>
+        <attr name="groundpress" format="reference|color"></attr>
+        <attr name="groundselect" format="reference|color"></attr>
+        <attr name="groundforce" format="reference|color"></attr>
+
+        <!-- 圆角半径 -->
+        <attr name="cornersradius" format="string"></attr>
+        <!-- 边框颜色值 -->
+        <attr name="strokecolors" format="string"></attr>
+        <!-- normal下的圆角颜色值 -->
+        <attr name="normalcornersradiuscolor" format="string"></attr>
+        <!-- normal下的渐变颜色值 格式：#968574-#123456-#456789 -->
+        <attr name="normalgradientcolors" format="string"></attr>
+        <attr name="presscornersradiuscolor" format="string"></attr>
+        <attr name="pressgradientcolors" format="string"></attr>
+    </declare-styleable>
+
+</resources>

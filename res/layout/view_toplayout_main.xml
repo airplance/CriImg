@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:criview="http://schemas.android.com/apk/res/hjh.criimag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#965874"
+        android:orientation="horizontal" >
+
+        <hjh.criimag.view.GLinearLayout
+            android:id="@+id/download_layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            criview:groundnormal="@drawable/icon_left_white"
+            criview:groundpress="@drawable/icon_left_orange" />
+
+        <TextView
+            android:id="@+id/txt_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0.8"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="left|center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text="后退头部"
+            android:textColor="#f0f0f0"
+            android:textSize="18sp" />
+
+        <hjh.criimag.view.GLinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+        </hjh.criimag.view.GLinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

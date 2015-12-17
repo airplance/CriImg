@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:criview="http://schemas.android.com/apk/res/hjh.criimag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88605E5A"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <hjh.criimag.view.GLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        criview:cornersradius="5"
+        criview:groundnormal="@color/default_white"
+        criview:groundpress="@color/default_white_press"
+        criview:normalcornersradiuscolor="@color/default_white"
+        criview:presscornersradiuscolor="@color/default_white_press" >
+
+        <TextView
+            android:id="@+id/take_photo_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="照  相"
+            android:textColor="#0079ff"
+            android:textSize="21sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/default_gray" />
+
+        <TextView
+            android:id="@+id/select_photo_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="从相册选择"
+            android:textColor="#0079ff"
+            android:textSize="21sp" />
+    </hjh.criimag.view.GLinearLayout>
+
+    <hjh.criimag.view.GButton
+        android:id="@+id/cancel_photo_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="取消"
+        android:textColor="#0079ff"
+        android:textSize="21sp"
+        criview:cornersradius="5"
+        criview:groundnormal="@color/default_white"
+        criview:groundpress="@color/default_white_press"
+        criview:normalcornersradiuscolor="@color/default_white"
+        criview:presscornersradiuscolor="@color/default_white_press" />
+
+</LinearLayout>

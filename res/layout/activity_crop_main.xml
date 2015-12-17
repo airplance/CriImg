@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:criview="http://schemas.android.com/apk/res/hjh.criimag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="hjh.criimag.view.CropActivity" >
+
+    <hjh.criimag.view.TopLayout
+        android:id="@+id/crop_toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </hjh.criimag.view.TopLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000" >
+
+        <view
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="hjh.criimag.view.CropImageView"
+            android:background="#00000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#000"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <hjh.criimag.view.GButton
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="保存"
+                android:textColor="@color/default_white"
+                android:textSize="21sp"
+                criview:cornersradius="5"
+                criview:groundnormal="#ff5500"
+                criview:groundpress="#d84800"
+                criview:normalcornersradiuscolor="#ff5500"
+                criview:presscornersradiuscolor="#d84800" />
+
+            <hjh.criimag.view.GButton
+                android:id="@+id/rotate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="旋转"
+                android:textColor="@color/default_white"
+                android:textSize="21sp"
+                criview:cornersradius="5"
+                criview:groundnormal="#ff9000"
+                criview:groundpress="#ff8400"
+                criview:normalcornersradiuscolor="#ff9000"
+                criview:presscornersradiuscolor="#ff8400" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
