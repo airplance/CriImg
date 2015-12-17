@@ -1,9 +1,9 @@
 package hjh.criimag.view;
 
 import hjh.criimag.R;
-import hjh.criimag.util.CropUtils;
-import hjh.criimag.util.PictureUtils;
-import hjh.criimag.util.PngSave;
+import hjh.criimag.util.CriCropUtils;
+import hjh.criimag.util.CirPictureUtils;
+import hjh.criimag.util.CriPngSave;
 
 import java.io.File;
 
@@ -95,7 +95,7 @@ public class PopPhotoView extends PopupWindow {
 		super();
 	}
 
-	private class IOnClick extends hjh.criimag.util.IntervalOnClick {
+	private class IOnClick extends hjh.criimag.util.CriIntervalOnClick {
 
 		public IOnClick(int interval_time) {
 			super(interval_time);
@@ -169,7 +169,7 @@ public class PopPhotoView extends PopupWindow {
 		// setAnimationStyle(R.style.pop_anim_style);// pop动画
 
 		// 获取外部存储目录
-		TEMP_IMAGE_PATH = PngSave.PIC_PATH + "picture.png";
+		TEMP_IMAGE_PATH = CriPngSave.PIC_PATH + "picture.png";
 		photoUri = Uri.fromFile(new File(TEMP_IMAGE_PATH));
 	}
 
@@ -219,14 +219,15 @@ public class PopPhotoView extends PopupWindow {
 			return;
 		} else {
 
-			Uri uri = data.getParcelableExtra(CropUtils.CROP_IMAGE_URI);
-			Bitmap photo = CropUtils.getInstance(mContext).getBitmap(uri);
+			Uri uri = data.getParcelableExtra(CriCropUtils.CROP_IMAGE_URI);
+			Bitmap photo = CriCropUtils.getInstance(mContext).getBitmap(uri);
 			// Bundle extras = data.getExtras();
 			// if (extras != null) {
 			// photo = extras.getParcelable(CropUtils.CROP_IMAGE_URI);
 			if (photo != null) {
-				photo = PictureUtils.zoomBitmap(photo, 145, 145);
-				PictureUtils.savePhotoToSDCard(photo, PngSave.PIC_PATH, "photo");
+				photo = CirPictureUtils.zoomBitmap(photo, 145, 145);
+				CirPictureUtils
+						.savePhotoToSDCard(photo, CriPngSave.PIC_PATH, "photo");
 				if (photoCall != null) {
 					photoCall.dealPortrait(photo);
 				}
@@ -246,7 +247,7 @@ public class PopPhotoView extends PopupWindow {
 				if (data != null) {
 					try {
 						// startPhotoZoom(data.getData());
-						CropUtils.getInstance(mContext).startPhotoCrop(
+						CriCropUtils.getInstance(mContext).startPhotoCrop(
 								data.getData(), null, RESULT_REQUEST_CODE);
 					} catch (ActivityNotFoundException e) {
 						// TODO: handle exception
@@ -259,11 +260,11 @@ public class PopPhotoView extends PopupWindow {
 				try {
 					if (data != null) {
 						// startPhotoZoom(data.getData());
-						CropUtils.getInstance(mContext).startPhotoCrop(
+						CriCropUtils.getInstance(mContext).startPhotoCrop(
 								data.getData(), null, RESULT_REQUEST_CODE);
 					} else {
 						// startPhotoZoom(photoUri);
-						CropUtils.getInstance(mContext).startPhotoCrop(
+						CriCropUtils.getInstance(mContext).startPhotoCrop(
 								photoUri, null, RESULT_REQUEST_CODE);
 					}
 				} catch (ActivityNotFoundException e) {
@@ -273,7 +274,7 @@ public class PopPhotoView extends PopupWindow {
 				break;
 			case RESULT_REQUEST_CODE:// 截图
 				if (data != null) {
-					CropUtils.getInstance(mContext).readTopImage(data,
+					CriCropUtils.getInstance(mContext).readTopImage(data,
 							photoCall);
 					// getImageToView(data);
 				}

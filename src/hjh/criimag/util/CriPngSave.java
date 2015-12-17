@@ -10,7 +10,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Environment;
 
-public class PngSave {
+public class CriPngSave {
 	public static final String PATH = Environment.getExternalStorageDirectory()
 			.getAbsolutePath() + "/YiDont_Phone";
 	public static String PIC_PATH = PATH + "/picture/";

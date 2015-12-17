@@ -1,6 +1,6 @@
 package hjh.criimag.view;
 
-import hjh.criimag.util.CGUtil;
+import hjh.criimag.util.CriCGUtil;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
@@ -17,6 +17,6 @@ public class GButton extends Button {
 	public GButton(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		// TODO Auto-generated constructor stub
-		CGUtil.setGroundFromView(this, attrs);
+		CriCGUtil.setGroundFromView(this, attrs);
 	}
 }

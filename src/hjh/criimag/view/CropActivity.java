@@ -1,7 +1,7 @@
 package hjh.criimag.view;
 
 import hjh.criimag.R;
-import hjh.criimag.util.CropUtils;
+import hjh.criimag.util.CriCropUtils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -30,6 +30,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.TextView;
 
 /**
  * The activity can crop specific region of interest from an image.
@@ -73,15 +74,15 @@ public class CropActivity extends MonitoredActivity {
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.activity_crop_main);
+		setContentView(R.layout.cri_activity_crop_main);
 		mContext=this;
 		
 		Intent intent = getIntent();
-		targetUri = intent.getParcelableExtra(CropUtils.IMAGE_URI);
+		targetUri = intent.getParcelableExtra(CriCropUtils.IMAGE_URI);
 		topname = intent.getStringExtra("topname");
 
-		TopLayout topLayout = (TopLayout) findViewById(R.id.crop_toplayout);
-		topLayout.setVisibility(topname);
+		TextView topLayout = (TextView) findViewById(R.id.txt_linear);
+		topLayout.setText(topname);  
 
 		initViews();
 
@@ -89,7 +90,7 @@ public class CropActivity extends MonitoredActivity {
 
 		boolean isBitmapRotate = false;
 		if (mBitmap == null) {
-			String path = CropUtils.getPath(mContext,targetUri);
+			String path = CriCropUtils.getPath(mContext,targetUri);
 //			String path = getFilePath(targetUri);
 			// 判断图片是不是旋转了90度，是的话就进行纠正。
 			isBitmapRotate = isRotateImage(path);
@@ -651,7 +652,7 @@ public class CropActivity extends MonitoredActivity {
 		mImageView.mHighlightViews.clear();
 
 //		String imgPath = getFilePath(targetUri);
-		String imgPath = CropUtils.getPath(mContext,targetUri);
+		String imgPath = CriCropUtils.getPath(mContext,targetUri);
 		
 		final String cropPath = imgPath.replace(".", "_crop_image.").trim();
 		mHandler.post(new Runnable() {
@@ -667,7 +668,7 @@ public class CropActivity extends MonitoredActivity {
 		Uri cropUri = Uri.fromFile(new File(cropPath));
 
 		Intent intent = new Intent();
-		intent.putExtra(CropUtils.CROP_IMAGE_URI, cropUri);
+		intent.putExtra(CriCropUtils.CROP_IMAGE_URI, cropUri);
 		setResult(RESULT_OK, intent);
 
 		finish();

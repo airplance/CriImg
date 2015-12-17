@@ -30,7 +30,7 @@ import android.graphics.drawable.Drawable;
  *            with the pictures
  * 
  */
-public final class PictureUtils {
+public final class CirPictureUtils {
 
 	public static Bitmap drawableToBitmap(Drawable drawable) {
 		int w = drawable.getIntrinsicWidth();

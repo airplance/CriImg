@@ -8,7 +8,7 @@ import android.view.View;
  * @param 有点击时间间隔的点击事件
  * 
  */
-public abstract class IntervalOnClick implements View.OnClickListener {
+public abstract class CriIntervalOnClick implements View.OnClickListener {
 
 	private long beforeTime = 0;
 	private int interval_time = 1000;
@@ -17,7 +17,7 @@ public abstract class IntervalOnClick implements View.OnClickListener {
 	/**
 	 * @param default interval_time is 1000ms
 	 */
-	public IntervalOnClick(int interval_time) {
+	public CriIntervalOnClick(int interval_time) {
 		this.interval_time = interval_time;
 	}
 

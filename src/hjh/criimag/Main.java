@@ -14,9 +14,9 @@ public class Main extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.cri_main);
 		photoView = (CircleImageView) findViewById(R.id.profile_photo);
-		popPhotoView = new PopPhotoView(this, R.layout.view_photo_main,
+		popPhotoView = new PopPhotoView(this, R.layout.cri_view_photo_main,
 				R.id.personal_main, photoView, null, null);
 	}
 

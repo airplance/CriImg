@@ -30,14 +30,14 @@ import android.util.Log;
  * 
  */
 @TargetApi(Build.VERSION_CODES.KITKAT)
-public class CropUtils {
+public class CriCropUtils {
 
 	protected Context mContext;
-	private static CropUtils cropUtils;
+	private static CriCropUtils cropUtils;
 
-	public static CropUtils getInstance(Context mContext) {
+	public static CriCropUtils getInstance(Context mContext) {
 		if (cropUtils == null) {
-			cropUtils = new CropUtils();
+			cropUtils = new CriCropUtils();
 		}
 		cropUtils.mContext = mContext;
 		return cropUtils;
@@ -99,7 +99,7 @@ public class CropUtils {
 
 			Uri uri = data.getParcelableExtra(CROP_IMAGE_URI);
 			Bitmap photo = getBitmap(uri);
-			PngSave.saveFile(photo, PngSave.PHOTO_PATH);
+			CriPngSave.saveFile(photo, CriPngSave.PHOTO_PATH);
 			if (photo != null) {
 				if (photoCall != null) {
 					photoCall.dealPortrait(photo);

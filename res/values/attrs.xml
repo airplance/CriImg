@@ -16,13 +16,13 @@
 -->
 <resources>
 
-    <declare-styleable name="CircleImageView">
+    <declare-styleable name="cri_CircleImageView">
         <attr name="border_width" format="dimension" />
         <attr name="border_color" format="color" />
     </declare-styleable>
 
     <!-- Cri View -->
-    <declare-styleable name="criView">
+    <declare-styleable name="cri_criView">
 
         <!-- 测试背景 -->
         <attr name="groundnormal" format="reference|color"></attr>

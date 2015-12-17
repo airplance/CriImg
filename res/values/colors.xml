@@ -1,34 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="main_tab_txt_color">#828282</color>
-    <color name="main_top_bg">#09a0f8</color>
-    <color name="main_bottom_bg">#ffffff</color>
-    <color name="layout_press_down">#ff6d00</color>
-    <color name="layout_press_up">#ffffff</color>
-    <color name="default_white">#f8f8f8</color>
-    <color name="default_white_press">#e6e5e5</color>
-    <color name="default_black">#000000</color>
-    <color name="default_orange">#FFA500</color>
-    <color name="default_red">#FF0000</color>
-    <color name="default_purple">#800080</color>
-    <color name="default_blue">#0085cf</color>
-    <color name="default_blue_press">#00529c</color>
-    <color name="default_blueq">#33b8ff</color>
-    <color name="default_gray">#dadada</color>
-    <!-- home -->
-    <color name="home_scroll_bg">#dadada</color>
-    <color name="home_txt_color">#000</color>
-    <!-- packnet item line -->
-    <color name="packnet_item_line">#abb</color>
-    <color name="packnet_item_txt_bg">#fff</color>
-    <color name="packnet_item_txt_bg2">#66f</color>
-    <!-- 上网套餐中单位以及item中的数字颜色字体 -->
-    <color name="packnet_item_txt_pink">#E10478</color>
-
-    <drawable name="back_press_bg">#0033d322</drawable>
-
-    <!-- 主要是圆角中背景色的原因，不设置又不行，所以只能设置了，然后弄个全透明 -->
-    <color name="packnet_list_item_select_bg">#77f8f8f8</color>
+    <color name="cri_default_white">#f8f8f8</color>
+    <color name="cri_default_white_press">#e6e5e5</color>
+    <color name="cri_default_gray">#dadada</color>
 
 </resources>

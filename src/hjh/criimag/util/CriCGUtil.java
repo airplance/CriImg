@@ -16,11 +16,11 @@ import android.view.View;
  * 圆角跟选择器的替代方法类
  */
 @SuppressLint("NewApi")
-public class CGUtil {
+public class CriCGUtil {
 
 	public static void setGroundFromView(View view, AttributeSet attrs) {
 		TypedArray a = view.getContext().obtainStyledAttributes(attrs,
-				R.styleable.criView);
+				R.styleable.cri_criView);
 		Drawable background = null;
 
 		StateListDrawable drawable = new StateListDrawable();
@@ -33,11 +33,11 @@ public class CGUtil {
 			int attr = a.getIndex(i);
 			switch (attr) {
 
-			case R.styleable.criView_groundnormal:
+			case R.styleable.cri_criView_groundnormal:
 				GradientDrawable grade = null;
 				// 渐变色
 				gradColor = a
-						.getString(R.styleable.criView_normalgradientcolors);
+						.getString(R.styleable.cri_criView_normalgradientcolors);
 				if (gradColor != null) {
 					split = gradColor.split("-");
 					int colors[] = new int[split.length];
@@ -48,7 +48,7 @@ public class CGUtil {
 							GradientDrawable.Orientation.TOP_BOTTOM, colors);
 				}
 				// 圆角
-				radiusInt = a.getString(R.styleable.criView_cornersradius);
+				radiusInt = a.getString(R.styleable.cri_criView_cornersradius);
 				if (radiusInt != null) {
 					// 是不是有渐变
 					boolean isGrad = true;
@@ -72,11 +72,11 @@ public class CGUtil {
 					// 没有渐变
 					if (!isGrad) {
 						radiusColor = a
-								.getString(R.styleable.criView_normalcornersradiuscolor);
+								.getString(R.styleable.cri_criView_normalcornersradiuscolor);
 						if (radiusColor != null)
 							grade.setColor(Color.parseColor(radiusColor));
 					}
-					strokeColor = a.getString(R.styleable.criView_strokecolors);
+					strokeColor = a.getString(R.styleable.cri_criView_strokecolors);
 					if (strokeColor != null)
 						grade.setStroke(2, Color.parseColor(strokeColor));
 				}
@@ -106,12 +106,12 @@ public class CGUtil {
 				}
 
 				break;
-			case R.styleable.criView_groundpress:
+			case R.styleable.cri_criView_groundpress:
 
 				GradientDrawable gradepress = null;
 				// 渐变色
 				gradColor = a
-						.getString(R.styleable.criView_pressgradientcolors);
+						.getString(R.styleable.cri_criView_pressgradientcolors);
 				if (gradColor != null) {
 					split = gradColor.split("-");
 					int colors[] = new int[split.length];
@@ -122,7 +122,7 @@ public class CGUtil {
 							GradientDrawable.Orientation.TOP_BOTTOM, colors);
 				}
 				// 圆角
-				radiusInt = a.getString(R.styleable.criView_cornersradius);
+				radiusInt = a.getString(R.styleable.cri_criView_cornersradius);
 				if (radiusInt != null) {
 					// 是不是有渐变
 					boolean isGrad = true;
@@ -146,7 +146,7 @@ public class CGUtil {
 					// 没有渐变
 					if (!isGrad) {
 						radiusColor = a
-								.getString(R.styleable.criView_presscornersradiuscolor);
+								.getString(R.styleable.cri_criView_presscornersradiuscolor);
 						if (radiusColor != null)
 							gradepress.setColor(Color.parseColor(radiusColor));
 					}
@@ -163,12 +163,12 @@ public class CGUtil {
 				}
 
 				break;
-			case R.styleable.criView_groundforce:
+			case R.styleable.cri_criView_groundforce:
 				background = a.getDrawable(attr);
 				drawable.addState(new int[] { android.R.attr.state_focused },
 						background);
 				break;
-			case R.styleable.criView_groundselect:
+			case R.styleable.cri_criView_groundselect:
 				drawable.addState(new int[] { android.R.attr.state_selected },
 						background);
 				background = a.getDrawable(attr);
@@ -185,14 +185,14 @@ public class CGUtil {
 
 	public static void setCriFromView(View view, AttributeSet attrs) {
 		TypedArray a = view.getContext().obtainStyledAttributes(attrs,
-				R.styleable.criView);
+				R.styleable.cri_criView);
 		Drawable background = null;
 		StateListDrawable drawable = new StateListDrawable();
 		final int N = a.getIndexCount();
 		for (int i = 0; i < N; i++) {
 			int attr = a.getIndex(i);
 			switch (attr) {
-			case R.styleable.criView_groundnormal:
+			case R.styleable.cri_criView_groundnormal:
 				background = a.getDrawable(attr);
 				drawable.addState(new int[] { -android.R.attr.state_focused,
 						-android.R.attr.state_selected,
@@ -201,17 +201,17 @@ public class CGUtil {
 						android.R.attr.state_selected,
 						-android.R.attr.state_pressed }, background);
 				break;
-			case R.styleable.criView_groundpress:
+			case R.styleable.cri_criView_groundpress:
 				background = a.getDrawable(attr);
 				drawable.addState(new int[] { android.R.attr.state_pressed },
 						background);
 				break;
-			case R.styleable.criView_groundforce:
+			case R.styleable.cri_criView_groundforce:
 				background = a.getDrawable(attr);
 				drawable.addState(new int[] { android.R.attr.state_focused },
 						background);
 				break;
-			case R.styleable.criView_groundselect:
+			case R.styleable.cri_criView_groundselect:
 				drawable.addState(new int[] { android.R.attr.state_selected },
 						background);
 				background = a.getDrawable(attr);
