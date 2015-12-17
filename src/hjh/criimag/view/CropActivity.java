@@ -29,6 +29,7 @@ import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.TextView;
 
@@ -81,6 +82,14 @@ public class CropActivity extends MonitoredActivity {
 		targetUri = intent.getParcelableExtra(CriCropUtils.IMAGE_URI);
 		topname = intent.getStringExtra("topname");
 
+		findViewById(R.id.download_layout1).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				finish();
+			}
+		});
 		TextView topLayout = (TextView) findViewById(R.id.txt_linear);
 		topLayout.setText(topname);  
 

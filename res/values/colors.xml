@@ -4,5 +4,9 @@
     <color name="cri_default_white">#f8f8f8</color>
     <color name="cri_default_white_press">#e6e5e5</color>
     <color name="cri_default_gray">#dadada</color>
+    <!-- 默认分割线颜色 -->
+    <color name="cri_default_line">#ffe4e4e4</color>
+    <!-- Orange饱和度500 -->
+    <color name="orange_500">#ff9800</color>
 
 </resources>

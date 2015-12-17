@@ -1,8 +1,8 @@
 package hjh.criimag.view;
 
 import hjh.criimag.R;
-import hjh.criimag.util.CriCropUtils;
 import hjh.criimag.util.CirPictureUtils;
+import hjh.criimag.util.CriCropUtils;
 import hjh.criimag.util.CriPngSave;
 
 import java.io.File;
@@ -22,6 +22,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import cxh.voctex.utils.ToastUtil;
@@ -46,7 +47,7 @@ public class PopPhotoView extends PopupWindow {
 	public static final int RESULT_REQUEST_CODE = 2;
 	private String TEMP_IMAGE_PATH;
 
-	private CircleImageView CirImg;
+	private ImageView CirImg;
 	private View popView;// Pop的View对象
 	private int showViewId; // Pop对象show的时候需要一个id来依存
 
@@ -54,7 +55,6 @@ public class PopPhotoView extends PopupWindow {
 		super(view, -1, -1);
 		this.popView = view;
 		this.mContext = mContext;
-		initView();
 	}
 
 	/**
@@ -73,7 +73,8 @@ public class PopPhotoView extends PopupWindow {
 	 *            是不是需要默认的CirImg点击事件，是的话传null
 	 */
 	public PopPhotoView(Context mContext, int layoutId, int showViewId,
-			CircleImageView CirImg, PhotoCall photoCall, OnClickListener OnClick) {
+			int[] textId, ImageView CirImg, PhotoCall photoCall,
+			OnClickListener OnClick) {
 		this(mContext, LayoutInflater.from(mContext).inflate(layoutId, null));
 		this.showViewId = showViewId;
 		if (photoCall == null) {
@@ -88,6 +89,7 @@ public class PopPhotoView extends PopupWindow {
 			this.CirImg = CirImg;
 			this.CirImg.setOnClickListener(this.OnClick);
 		}
+		this.textIds = textId;
 	}
 
 	@SuppressWarnings("unused")
@@ -105,35 +107,31 @@ public class PopPhotoView extends PopupWindow {
 		public void IonClick(View v) {
 			// TODO Auto-generated method stub
 
-			switch (v.getId()) {
-			case R.id.take_photo_text:
+			if (v.getId() == textIds[0]) {
 				Intent cCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
 				cCamera.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
 				((Activity) mContext).startActivityForResult(cCamera,
 						CAMERA_REQUEST_CODE);
 				dismiss();
-				break;
-			case R.id.select_photo_text:
+			} else if (v.getId() == textIds[1]) {
 				Intent cLocal = new Intent();
 				cLocal.setType("image/*");// 文件类型
 				cLocal.setAction(Intent.ACTION_GET_CONTENT);
 				((Activity) mContext).startActivityForResult(cLocal,
 						IMAGE_REQUEST_CODE);
 				dismiss();
-				break;
-			case R.id.cancel_photo_text:
+			} else if (v.getId() == textIds[2]) {
 				dismiss();
-				break;
-			default:
+			} else {
 				// 这个是点击CirImg的
 				if (showViewId != -1) {
 					showView(((Activity) mContext).findViewById(showViewId));
 				} else {
 					ToastUtil.showS(mContext, "showViewId=-1");
 				}
-				break;
 			}
+
 		}
 	}
 
@@ -226,8 +224,8 @@ public class PopPhotoView extends PopupWindow {
 			// photo = extras.getParcelable(CropUtils.CROP_IMAGE_URI);
 			if (photo != null) {
 				photo = CirPictureUtils.zoomBitmap(photo, 145, 145);
-				CirPictureUtils
-						.savePhotoToSDCard(photo, CriPngSave.PIC_PATH, "photo");
+				CirPictureUtils.savePhotoToSDCard(photo, CriPngSave.PIC_PATH,
+						"photo");
 				if (photoCall != null) {
 					photoCall.dealPortrait(photo);
 				}

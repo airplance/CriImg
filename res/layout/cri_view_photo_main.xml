@@ -1,28 +1,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:criview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#88605E5A"
     android:gravity="bottom"
     android:orientation="vertical" >
 
-    <hjh.criimag.view.GLinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
         android:gravity="bottom"
-        android:orientation="vertical"
-        criview:cri_cornersradius="5"
-        criview:cri_groundnormal="@color/cri_default_white"
-        criview:cri_groundpress="@color/cri_default_white_press"
-        criview:cri_normalcornersradiuscolor="@color/cri_default_white"
-        criview:cri_presscornersradiuscolor="@color/cri_default_white_press" >
+        android:orientation="vertical" >
 
         <TextView
             android:id="@+id/take_photo_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/cri_selector_item_top_radius"
             android:gravity="center"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
@@ -33,21 +29,26 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/cri_default_gray" />
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/cri_default_line" />
 
         <TextView
             android:id="@+id/select_photo_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/cri_selector_item_bottom_radius"
             android:gravity="center"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:text="从相册选择"
             android:textColor="#0079ff"
             android:textSize="21sp" />
-    </hjh.criimag.view.GLinearLayout>
+    </LinearLayout>
 
-    <hjh.criimag.view.GButton
+    <TextView
         android:id="@+id/cancel_photo_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,16 +56,12 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="10dp"
+        android:background="@color/cri_selector_item_background_radius"
         android:gravity="center"
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
         android:text="取消"
         android:textColor="#0079ff"
-        android:textSize="21sp"
-        criview:cri_cornersradius="5"
-        criview:cri_groundnormal="@color/cri_default_white"
-        criview:cri_groundpress="@color/cri_default_white_press"
-        criview:cri_normalcornersradiuscolor="@color/cri_default_white"
-        criview:cri_presscornersradiuscolor="@color/cri_default_white_press" />
+        android:textSize="21sp" />
 
 </LinearLayout>

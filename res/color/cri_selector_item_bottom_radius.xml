@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:state_pressed="true"><shape>
+            <solid android:color="#F1F1F1" />
+
+            <!-- <size android:height="138dp" android:width="200dp" /> -->
+            <!--#88bababa
+                 <corners > 圆角
+					Android:radius  圆角的半径 值越大角越圆
+					Android:topRightRadius  右上圆角半径
+					Android:bottomLeftRadius 右下圆角角半径
+					Android:topLeftRadius 左上圆角半径
+					Android:bottomRightRadius 左下圆角半径            -->
+            <corners android:bottomLeftRadius="4dp" android:bottomRightRadius="4dp"/>
+        </shape></item>
+    <item android:state_pressed="false"><shape>
+            <solid android:color="#FEFEFF" />
+            <!-- <size android:height="138dp" android:width="200dp" /> -->
+            <corners android:bottomLeftRadius="4dp" android:bottomRightRadius="4dp"/>
+        </shape></item>
+
+</selector><!--
+<corners > 圆角 
+ 
+android:radius  圆角的半径 值越大角越圆 
+ 
+android:topRightRadius  右上圆角半径 
+   
+android:bottomLeftRadius 右下圆角角半径 
+  
+android:topLeftRadius 左上圆角半径 
+ 
+android:bottomRightRadius 左下圆角半径
+-->
+

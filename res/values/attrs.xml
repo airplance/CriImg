@@ -21,25 +21,4 @@
         <attr name="cri_border_color" format="color" />
     </declare-styleable>
 
-    <!-- Cri View -->
-    <declare-styleable name="cri_criView">
-
-        <!-- 测试背景 -->
-        <attr name="cri_groundnormal" format="reference|color"></attr>
-        <attr name="cri_groundpress" format="reference|color"></attr>
-        <attr name="cri_groundselect" format="reference|color"></attr>
-        <attr name="cri_groundforce" format="reference|color"></attr>
-
-        <!-- 圆角半径 -->
-        <attr name="cri_cornersradius" format="string"></attr>
-        <!-- 边框颜色值 -->
-        <attr name="cri_strokecolors" format="string"></attr>
-        <!-- normal下的圆角颜色值 -->
-        <attr name="cri_normalcornersradiuscolor" format="string"></attr>
-        <!-- normal下的渐变颜色值 格式：#968574-#123456-#456789 -->
-        <attr name="cri_normalgradientcolors" format="string"></attr>
-        <attr name="cri_presscornersradiuscolor" format="string"></attr>
-        <attr name="cri_pressgradientcolors" format="string"></attr>
-    </declare-styleable>
-
 </resources>
