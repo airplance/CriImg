@@ -13,11 +13,11 @@
         android:layout_marginRight="5dp"
         android:gravity="bottom"
         android:orientation="vertical"
-        criview:cornersradius="5"
-        criview:groundnormal="@color/cri_default_white"
-        criview:groundpress="@color/cri_default_white_press"
-        criview:normalcornersradiuscolor="@color/cri_default_white"
-        criview:presscornersradiuscolor="@color/cri_default_white_press" >
+        criview:cri_cornersradius="5"
+        criview:cri_groundnormal="@color/cri_default_white"
+        criview:cri_groundpress="@color/cri_default_white_press"
+        criview:cri_normalcornersradiuscolor="@color/cri_default_white"
+        criview:cri_presscornersradiuscolor="@color/cri_default_white_press" >
 
         <TextView
             android:id="@+id/take_photo_text"
@@ -61,10 +61,10 @@
         android:text="取消"
         android:textColor="#0079ff"
         android:textSize="21sp"
-        criview:cornersradius="5"
-        criview:groundnormal="@color/cri_default_white"
-        criview:groundpress="@color/cri_default_white_press"
-        criview:normalcornersradiuscolor="@color/cri_default_white"
-        criview:presscornersradiuscolor="@color/cri_default_white_press" />
+        criview:cri_cornersradius="5"
+        criview:cri_groundnormal="@color/cri_default_white"
+        criview:cri_groundpress="@color/cri_default_white_press"
+        criview:cri_normalcornersradiuscolor="@color/cri_default_white"
+        criview:cri_presscornersradiuscolor="@color/cri_default_white_press" />
 
 </LinearLayout>

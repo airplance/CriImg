@@ -69,9 +69,9 @@ public class CircleImageView extends ImageView {
 				R.styleable.cri_CircleImageView, defStyle, 0);
 
 		mBorderWidth = a.getDimensionPixelSize(
-				R.styleable.cri_CircleImageView_border_width,
+				R.styleable.cri_CircleImageView_cri_border_width,
 				DEFAULT_BORDER_WIDTH);
-		mBorderColor = a.getColor(R.styleable.cri_CircleImageView_border_color,
+		mBorderColor = a.getColor(R.styleable.cri_CircleImageView_cri_border_color,
 				DEFAULT_BORDER_COLOR);
 
 		a.recycle();

@@ -44,11 +44,11 @@
                 android:text="保存"
                 android:textColor="@color/cri_default_white"
                 android:textSize="21sp"
-                criview:cornersradius="5"
-                criview:groundnormal="#ff5500"
-                criview:groundpress="#d84800"
-                criview:normalcornersradiuscolor="#ff5500"
-                criview:presscornersradiuscolor="#d84800" />
+                criview:cri_cornersradius="5"
+                criview:cri_groundnormal="#ff5500"
+                criview:cri_groundpress="#d84800"
+                criview:cri_normalcornersradiuscolor="#ff5500"
+                criview:cri_presscornersradiuscolor="#d84800" />
 
             <hjh.criimag.view.GButton
                 android:id="@+id/rotate"
@@ -63,11 +63,11 @@
                 android:text="旋转"
                 android:textColor="@color/cri_default_white"
                 android:textSize="21sp"
-                criview:cornersradius="5"
-                criview:groundnormal="#ff9000"
-                criview:groundpress="#ff8400"
-                criview:normalcornersradiuscolor="#ff9000"
-                criview:presscornersradiuscolor="#ff8400" />
+                criview:cri_cornersradius="5"
+                criview:cri_groundnormal="#ff9000"
+                criview:cri_groundpress="#ff8400"
+                criview:cri_normalcornersradiuscolor="#ff9000"
+                criview:cri_presscornersradiuscolor="#ff8400" />
 
         </LinearLayout>
     </FrameLayout>
